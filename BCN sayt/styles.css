@@ -29,12 +29,12 @@ body {
 	width: 960px;
 	margin: 0 auto;
 }
-.title {
+.logo {
 	margin-top: 19px;
 	margin-left: 2px;
 	float: left;
 }
-.title img {
+.logo img {
 	width: 158px;
 	height: 75px;
 }
@@ -45,13 +45,15 @@ body {
 	margin-top: 64px;
 }
 .input-text input {
-	width: 422px;
+	width: 412px;
 	height: 28px;
 	border-top: 1px solid #1c1c1c;
 	border-left: 1px solid #1c1c1c;
 	border-bottom: 1px solid #b5b5b5;
 	border-right: 1px solid #b5b5b5;
 	padding: 0;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 .input-text {
 	float: left;
@@ -157,13 +159,12 @@ a {
 }
 .language {
 	float: left;
-	margin-left: 31px;
+	margin-left: 30px;
 	margin-top: 75px;
 	margin-right: 8px;
-}
-.language {
 	width: 63px;
 	height: 13px;
+	background-image:  url(images/language-icon.png);
 }
 .clearfix:after {
 	content: ".";
@@ -351,20 +352,20 @@ a {
 	top: 0;
 	position: absolute;
 }
-.magazin-theme {
+.slogans-theme {
 	width: 960px;
 	margin: 0 auto;
 	margin-top: 23px;
 	clear: left;
 }
-.magazin-theme ul {
+.slogans-theme ul {
 	margin: 0;
 	padding: 0;
 } 
-.donna-magazin.active, .marken.active, .iphone-apl.active {
+.woman-magazin.active, .brands-slogan.active, .iphone-apl.active {
 	display: block;
 }
-.donna-magazin, .marken, .iphone-apl {
+.woman-magazin, .brands-slogan, .iphone-apl {
 	display: none;
 	margin-right: 5px;
 	width: 590px;
@@ -377,16 +378,16 @@ a {
 	float: left;
 	position: relative;
 }
-.donna-magazin {
+.woman-magazin {
 	background-color: #c3d8e9;	
 }
-.donna-magazin img {
+.woman-magazin img {
 	float: left;
 	margin-top: 35px;
 	margin-left: 42px;
 	margin-right: 28px;
 }
-.donna-magazin p {
+.woman-magazin p {
 	text-transform: uppercase;
 	font-size: 30px;
 	font-family: GothamBold; 
@@ -400,7 +401,7 @@ a {
 	padding-bottom: 45px;
 	line-height: 36px;
 	}
-p .alles {
+p .main-slogan {
 	color: #6993b6;
 }
 .triangle-magazin {
@@ -409,10 +410,10 @@ p .alles {
 	left: 609px;
 	z-index: 2;
 }
-.donna-magazin .triangle-magazin {
+.woman-magazin .triangle-magazin {
 	top: 45px;
 }
-.marken .triangle-magazin {
+.brands-slogan .triangle-magazin {
 	top: 125px;
 }
 .iphone-apl .triangle-magazin {
@@ -496,11 +497,11 @@ p .alles {
 .clear {
 	clear: both;
 }	
-.arrow1, .arrow2, .markenwelt ul li{
+.slider-previous, .slider-next, .world-brands ul li{
 	display: inline-block;
 	float: left;
 }
-.arrow1, .arrow2 {
+.slider-previous, .slider-next {
 	height: 57px;
 	width: 29px;
 	background-color: #414040;
@@ -509,41 +510,41 @@ p .alles {
 	background-position: center;
 	position: absolute;
 }
-.arrow1 {
+.slider-previous {
 	border-top-right-radius: 28.5px;
 	border-bottom-right-radius: 28.5px;
-	background-image: url(images/arrow1.png);
+	background-image: url(images/slider-previous.png);
 	left: 0; 
 }
-.arrow1:hover {
+.slider-previous:hover {
 	background-color: #4d4c4c;
 }
-.arrow2 {
+.slider-next {
 	border-top-left-radius: 28.5px;
 	border-bottom-left-radius: 28.5px;
-	background-image: url(images/arrow2.png);
+	background-image: url(images/slider-next.png);
 	right: 0;  
 }
-.arrow2:hover {
+.slider-next:hover {
 	background-color: #4d4c4c;
 }
-.markenwelt ul li {
+.world-brands ul li {
 	list-style-type: none;
 	margin-top: 45px;
 	padding-left: 30px;
 }
-.markenwelt ul li a {
+.world-brands ul li a {
 	background-repeat: no-repeat;
 	display: block;
 }
-.markenwelt ul li:first-child {
+.world-brands ul li:first-child {
 	padding-left: 20px;
 }
-.markenwelt {
+.world-brands {
 	margin-top: 21px;
 	padding-right: 30px;
 } 
-.markenwelt ul li:last-child {
+.world-brands ul li:last-child {
 	padding-right: 22px;
 }
 .haus {
@@ -578,7 +579,7 @@ p .alles {
 .freundin:hover {
 	background-image: url(images/freundin-hover.png);
 }
-.marks {
+.slider {
 	position: relative;
 	width: 630px;
 	height: 122px;
@@ -645,15 +646,15 @@ p .alles {
 	margin-bottom: 21px;
 	margin-right: 30px;
 }
-.slidebar {
+.sidebar {
 	width: 300px;
 	height: 1527px;
 	float: left;
 }
-.schnelleinstieg {
+.select-box {
 	width: 300px;
 }
-.schnelleinstieg ul {
+.select-box ul {
 	display: inline-block;
 	width: 280px;
 	background-color: #f7f7f7;
@@ -662,7 +663,7 @@ p .alles {
 	padding-bottom: 15px;
 	margin: 0;
 }
-.schnelleinstieg ul li select {
+.select-box ul li select {
 	width: 260px;
 	height: 23px;
 	padding-left: 7px;
@@ -674,18 +675,18 @@ p .alles {
 	display: inline-block;
 	border: none;
 }
-.schnelleinstieg ul option {
+.select-box ul option {
 	color: #000000;
 	font-family: Arial;
 	font-size: 12px;
 	line-height: 16px;
 	margin: 0 0 0 11px;
 }	
-.schnelleinstieg ul li {
+.select-box ul li {
 	list-style-type: none;
 	margin-left: 0;
 }
-.print-wirkt {
+.print {
 	background-color: #f7f7f7;
 	width: 300px;
 	height: 120px;
@@ -696,7 +697,7 @@ p .alles {
 	margin-top: 20px;
 	float: left;
 }
-.argumente {
+.arguments {
 	background-color: #ffffff;
 	width: 170px;
 	float: right;
@@ -707,7 +708,7 @@ p .alles {
 	padding-left: 10px;
 	position: relative;
 }
-.print-wirkt span {	
+.print span {	
 	font-family: GothamBold;
 	font-size: 20px;
 	line-height: 16px;
@@ -716,7 +717,7 @@ p .alles {
 	color: #000000;
 	margin: 0;
 }
-.argumente-title span {
+.arguments-title span {
 	color: #658daf;
 }
 .arrow3 {
@@ -735,7 +736,7 @@ p .alles {
 	background-image: url(images/arrow3-hover.png);
 }
 
-.print-wirkt .arrow3 {
+.print .arrow3 {
 	margin: 0 0 0 5px;
 }
 .arrow3 img {
@@ -747,7 +748,7 @@ p .alles {
 .accordion-item.active .accordion-item-content {
 	display: block;
 }
-.infos-service h3 {
+.info-service h3 {
 	margin-top: 41px;
 }
 .accordion-item-title {
@@ -757,7 +758,7 @@ p .alles {
 	font-weight: bold;
 	color: #1b1b1b;
 }
-.infos-service .active .accordion-item-title { 
+.info-service .active .accordion-item-title { 
 	color: #6b95b8; 
 	margin: 0;
 	padding-top: 17px;
@@ -766,7 +767,7 @@ p .alles {
 	line-height: 16px;
 	font-weight: bold;
 }
-.infos-service ul {
+.info-service ul {
 	background-color: #f7f7f7;
 	width: 280px;
 	padding-bottom: 40px;
@@ -774,15 +775,15 @@ p .alles {
 	margin: 0 20px 0 0;
 	list-style-type: none;
 }
-.infos-service {
+.info-service {
 	position: relative;
 }
-.infos-service ul li.active {
+.info-service ul li.active {
 	margin-bottom: 35px;
 	padding: 0;
 	border-top: 1px solid #d2d2d2;
 }
-.infos-service ul li:first-child.active, .infos-service ul li:first-child {
+.info-service ul li:first-child.active, .info-service ul li:first-child {
 	border-top: none;
 }
 .accordion-item-content img {
@@ -813,7 +814,7 @@ p .alles {
 	line-height: 16px;
 	margin-left: 4px;
 }
-.infos-service ul li {
+.info-service ul li {
 	list-style-type: none;
 	border-top: 1px solid #d2d2d2;
 	padding-top: 5px;
@@ -823,18 +824,18 @@ p .alles {
 .accordion li:last-child {
 	border-bottom: 1px solid #d2d2d2;
 }
-.infos-service .mehr {
+.info-service .more-sidebar {
 	position: absolute;
 	right: 20px;
 	bottom: 15px;
 }
-.slidebar .mehr {
+.sidebar .more-sidebar {
 	font-size: 11px;
 	letter-spacing: 0.3px;
 	font-family: Arial;
 	color: #959595;
 }
-.mehr .arrow3 {
+.more-sidebar .arrow3 {
 	margin-bottom: -2px;
 }
 .burda-news h3 {
@@ -881,7 +882,7 @@ p .alles {
 	margin-left: 65px;
 	display: inherit;
 }
-.burda-news .mehr {
+.burda-news .more-sidebar {
 	position: absolute;
 	right: 21px;
 	bottom: 16px;
@@ -907,7 +908,7 @@ p .alles {
 	padding-top: 27px;
 	margin-left: 85px;
 }
-.newsletter .mehr {
+.newsletter .more-sidebar {
 	position: absolute;
 	bottom: 6px;
 	right: 20px;
@@ -923,7 +924,7 @@ p .alles {
 	padding-top: 15px;
 	padding-bottom: 35px;
 }
-.hot .mehr {
+.hot .more-sidebar {
 	position: absolute;
 	right: 20px;
 	bottom: 20px;
@@ -946,7 +947,7 @@ p .alles {
 	font-size: 16px;
 	line-height: 35px;
 }
-.kontakt {
+.contact {
 	font-size: 24.5px;
 	line-height: 35px;
 }
@@ -964,7 +965,7 @@ p .alles {
 	font-size: 24px;
 	line-height: 30px;
 }
-.zeitschriften {
+.magazins {
 	font-size: 20px;
 	line-height: 30px;
 	letter-spacing: 1px;
@@ -986,10 +987,10 @@ p .alles {
 .hot a :hover {
  	color: #6993b6;
 }
-.mehr:hover {
+.more-sidebar:hover {
 	color: #6993b6;	
 }
-.mehr:hover .arrow3 {
+.more-sidebar:hover .arrow3 {
 	background-color: #6993b6;
 	background-image: url(images/arrow3-hover.png);
 }
@@ -1000,6 +1001,16 @@ p .alles {
 	width: 960px;
 	height: 345px;
 	margin: 0 auto;
+}
+.footer-online .social-network a {
+	display: inline-block;
+	line-height: 70px;
+	vertical-align: middle;
+}
+.footer-online .social-network img {
+	display: inline-block;
+	line-height: 70px;
+	vertical-align: middle;
 }
 .footer ul li a, .footer ul li {
 	color: #ffffff;
@@ -1017,12 +1028,13 @@ p .alles {
 	padding: 0;
 	margin: 0;
 }
-.footer .service, .footer .wir-sind-bcn, .footer .kontakt {
+.footer .service, .footer .wir-sind-bcn, .footer .contact {
 	padding-top: 18px;
 	float: left;
+	letter-spacing: -0.4px;
 }
 .wir-sind-bcn, .service {
-	padding-right: 115px;
+	padding-right: 124px;
 }
 .footer ul {
 	padding-left: 0;
@@ -1050,8 +1062,6 @@ p .alles {
 }
 .footer-online li {
 	display: inline-block;
-	padding-top: 27px;
-	height: 43px;
 }
 .footer-general .footer-online {
 	margin-top: 0;
@@ -1061,14 +1071,23 @@ p .alles {
 	height: 70px;
 	width: 960px;	
 }
+.footer-online {
+	line-height: 70px;
+}
 .footer-general .footer-online li {
 	font-size: 12px;
+}
+.footer-online .online-angebote, .footer-online .besuchen, .footer-online .burda-community {
+	line-height: 70px;
+	vertical-align: middle;
 }
 .online-angebote {
 	width: 281px;
 	border-right: solid 1px #696969; 
 }
-
+.footer .online-angebote a {
+	font-size: 12px;
+}
 .besuchen {
 	width: 370px;
 	border-right: solid 1px #696969;
@@ -1088,7 +1107,7 @@ p .alles {
 	padding-right: 35px;
 }
 .burda-community {
-	width: 244px;
+	width: 242px;
 	padding-left: 20px;
 }
 .footer p {
