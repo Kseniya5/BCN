@@ -352,20 +352,20 @@ a {
 	top: 0;
 	position: absolute;
 }
-.slogans-theme {
+.slider-theme {
 	width: 960px;
 	margin: 0 auto;
 	margin-top: 23px;
 	clear: left;
 }
-.slogans-theme ul {
+.slider-theme ul {
 	margin: 0;
 	padding: 0;
 } 
-.woman-magazin.active, .brands-slogan.active, .iphone-apl.active {
+.slider-theme .slide.active {
 	display: block;
 }
-.woman-magazin, .brands-slogan, .iphone-apl {
+.slider-theme .slide {
 	display: none;
 	margin-right: 5px;
 	width: 590px;
@@ -376,18 +376,20 @@ a {
 	box-shadow:         0px 1px 8px 0px rgba(0, 0, 0, 0.4);
 	margin-right: 5px;
 	float: left;
+}
+.top-theme li {
 	position: relative;
 }
-.woman-magazin {
+.slider-theme .slide:first-child {
 	background-color: #c3d8e9;	
 }
-.woman-magazin img {
+.slider-theme .slide:first-child img {
 	float: left;
 	margin-top: 35px;
 	margin-left: 42px;
 	margin-right: 28px;
 }
-.woman-magazin p {
+.slider-theme .slide:first-child p {
 	text-transform: uppercase;
 	font-size: 30px;
 	font-family: GothamBold; 
@@ -400,27 +402,40 @@ a {
 	padding-left: 19px;
 	padding-bottom: 45px;
 	line-height: 36px;
-	}
+}
 p .main-slogan {
 	color: #6993b6;
 }
-.triangle-magazin {
+.wrapper-triangle-theme {
+	display: none;
+}
+.wrapper-triangle-theme {
 	position: absolute;
-	top: 45px;
-	left: 609px;
+	top: 0;
+	left: -49px;
 	z-index: 2;
 }
-.woman-magazin .triangle-magazin {
-	top: 45px;
+.top-theme li.active .wrapper-triangle-theme {
+	display: block;
 }
-.brands-slogan .triangle-magazin {
-	top: 125px;
-}
-.iphone-apl .triangle-magazin {
-	top: 200px;
-}
-.triangle-magazin img {
+.triangle-theme {
 	margin: 0;
+	display: block;
+	width: 36px;
+	height: 62px;
+	position: relative;
+	overflow: hidden;
+}
+.triangle-theme:after {
+	content: "";
+	position: absolute;
+	width: 36px;
+	height:36px;
+	background: #ffffff;
+	transform: rotate(45deg);
+	top: 9px;
+	left: -17px;
+	box-shadow: 4px 0px 8px 0px rgba(0,0,0,0.4);
 }
 .top-theme {
 	float: left;
@@ -454,11 +469,10 @@ p .main-slogan {
 	margin: 0;
 	padding: 0;
 }
-.top-theme hr {
-	line-height: 1px;
-	color:#bfbfbf;
-	margin-top: 6px;
+.top-theme h3 {
+	padding-bottom: 6px;
 	margin-bottom: 24px;
+	border-bottom: solid #bfbfbf 1px
 }
 .top-theme h4 {
 	font-family: Arial;
@@ -531,53 +545,33 @@ p .main-slogan {
 .world-brands ul li {
 	list-style-type: none;
 	margin-top: 45px;
-	padding-left: 30px;
+	padding-left: 15px;
 }
 .world-brands ul li a {
-	background-repeat: no-repeat;
 	display: block;
 }
 .world-brands ul li:first-child {
-	padding-left: 20px;
+	padding-left: 13px;
 }
 .world-brands {
 	margin-top: 21px;
 	padding-right: 30px;
 } 
 .world-brands ul li:last-child {
-	padding-right: 22px;
+	padding-right: 18px;
 }
-.haus {
-	background-image: url(images/haus.png);
-	width: 108px;
-	height: 55px;
-}
-.haus:hover {
-	background-image: url(images/haus-hover.png);
-}
-.elle {
-	background-image: url(images/elle.png);
-	width: 87px;
-	height: 55px;
-}
-.elle:hover {
-	background-image: url(images/elle-hover.png);
-} 
-.cinema {
-	background-image: url(images/cinema.png);
+.world-brands .slide {
 	width: 122px;
 	height: 55px;
 }
-.cinema:hover {
-	background-image: url(images/cinema-hover.png);
-}	
-.freundin {
-	background-image: url(images/freundin.png);
-	width: 112px;
-	height: 55px;
+.world-brands .slide:hover .simple-image {
+	display: none
 }
-.freundin:hover {
-	background-image: url(images/freundin-hover.png);
+.world-brands .slide:hover .hovered-image {
+	display: block;
+}
+.hovered-image {
+	display: none;
 }
 .slider {
 	position: relative;
@@ -595,11 +589,12 @@ p .main-slogan {
 	background: linear-gradient(to bottom,  rgb(29,29,29) 0%,rgb(68,67,67) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d1d1d', endColorstr='#444343',GradientType=0 ); /* IE6-9 */
 }
-.content-general hr {
-	line-height: 1px;
-	color:#bfbfbf;
-	margin-top: 5px;
+.content-general h3 {
+	padding-bottom: 5px;
 	margin-bottom: 9px;
+	line-height: ;
+	border-bottom: solid #bfbfbf 1px;
+	
 }
 .content h2 {
 	text-transform: uppercase;
@@ -720,8 +715,8 @@ p .main-slogan {
 .arguments-title span {
 	color: #658daf;
 }
-.arrow3 {
-	background-image: url(images/arrow3.png);
+.more-icon {
+	background-image: url(images/more-icon.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-color: #bcbcbc;
@@ -731,15 +726,15 @@ p .main-slogan {
 	border-radius: 6px;
 	display: inline-block;
 }
-.arrow3:hover {
+.more-icon:hover {
 	background-color: #6993b6;
-	background-image: url(images/arrow3-hover.png);
+	background-image: url(images/more-icon-hover.png);
 }
 
-.print .arrow3 {
+.print .more-icon {
 	margin: 0 0 0 5px;
 }
-.arrow3 img {
+.more-icon img {
 	display: block;
 }
 .accordion-item-content {
@@ -835,7 +830,7 @@ p .main-slogan {
 	font-family: Arial;
 	color: #959595;
 }
-.more-sidebar .arrow3 {
+.more-sidebar .more-icon {
 	margin-bottom: -2px;
 }
 .burda-news h3 {
@@ -898,6 +893,9 @@ p .main-slogan {
 	float: left;
 	margin-left: 20px;
 	margin-top: 10px;
+	width: 53px;
+	height: 43px;
+	background: url(images/newsletter.png) no-repeat;
 }
 .newsletter p {
 	font-family: GothamBold;
@@ -935,53 +933,48 @@ p .main-slogan {
 	color: #7d7d7d;
 	text-transform: uppercase;
 }
-.BCN {
+.font-size-29 {
 	font-size: 29px;
 	letter-spacing: 2px;
 }
-.crossmedia {
+.font-size-19 {
 	font-size: 19px;
 	letter-spacing: 2px;
 }
-.download {
+.font-size-16 {
 	font-size: 16px;
 	line-height: 35px;
 }
-.contact {
+.font-size-25 {
 	font-size: 24.5px;
 	line-height: 35px;
 }
-.mobile {
-	font-size: 29px;
+.font-size-29:nth-child(2) {
 	line-height: 20px;
-	letter-spacing: 2px;
 }
-.online {
-	font-size: 19px;
+.font-size-19:nth-child(2) {
 	line-height: 20px;
 	letter-spacing: 1px;
 }
-.ipad {
+.font-size-24 {
 	font-size: 24px;
 	line-height: 30px;
 }
-.magazins {
+.font-size-20 {
 	font-size: 20px;
 	line-height: 30px;
 	letter-spacing: 1px;
 }
-.anzeigen {
-	font-size: 19px;
+.font-size-19:nth-child(3) {
 	line-height: 25px;
 	letter-spacing: 1px;
 }
-.studien {
+.font-size-25 {
 	font-size: 25px;
 	line-height: 25px;
 	letter-spacing: 1px;
 }
-.hubert {
-	font-size: 16px;
+.font-size-16:nth-child(2) {
 	line-height: 30px;
 }
 .hot a :hover {
@@ -990,16 +983,16 @@ p .main-slogan {
 .more-sidebar:hover {
 	color: #6993b6;	
 }
-.more-sidebar:hover .arrow3 {
+.more-sidebar:hover .more-icon {
 	background-color: #6993b6;
-	background-image: url(images/arrow3-hover.png);
+	background-image: url(images/more-icon-hover.png);
 }
 .footer-general {
 	background-color: #434343;
-}
-.footer {
-	width: 960px;
 	height: 345px;
+}
+.footer-menu, .footer-online, .last-slogan {
+	width: 960px;
 	margin: 0 auto;
 }
 .footer-online .social-network a {
@@ -1012,14 +1005,14 @@ p .main-slogan {
 	line-height: 70px;
 	vertical-align: middle;
 }
-.footer ul li a, .footer ul li {
+.footer-general ul li a, .footer-general ul li {
 	color: #ffffff;
 	font-family: Arial;
 	font-size: 13px;
 	line-height: 18px;
 	list-style-type: none;
 }
-.footer h5 {
+.footer-general h5 {
 	color: #ffffff;
 	font-family: Arial;
 	font-size: 13px;
@@ -1028,37 +1021,28 @@ p .main-slogan {
 	padding: 0;
 	margin: 0;
 }
-.footer .service, .footer .wir-sind-bcn, .footer .contact {
-	padding-top: 18px;
+.footer-general .service, .footer-general .we-bcn, .footer-general .contact {
+	padding-top: 19px;
 	float: left;
 	letter-spacing: -0.4px;
 }
-.wir-sind-bcn, .service {
+.we-bcn, .service {
 	padding-right: 124px;
 }
-.footer ul {
-	padding-left: 0;
-	padding-top: 10px;
+.footer-menu ul {
+	padding: 0;
 	margin: 0;
+	padding-top: 10px;
 }
 .footer-menu {
 	padding-bottom: 17px;
 }
-.footer ul li a:hover {
+.footer-general ul li a:hover {
 	color: #6993b6;
 }
-.line {
-	position: absolute;
-	width: 9999px;
-	height: 1px;
-	background-color: #696969;
-	left: -50%; 
-}
-.line :first-child{
-	top: 0;
-}
-.line :last-child {
-	bottom: 0;
+.footer-online-wrapper {
+	border-top: 1px solid #696969;
+	border-bottom: 1px solid #696969;
 }
 .footer-online li {
 	display: inline-block;
@@ -1077,18 +1061,18 @@ p .main-slogan {
 .footer-general .footer-online li {
 	font-size: 12px;
 }
-.footer-online .online-angebote, .footer-online .besuchen, .footer-online .burda-community {
+.footer-online .online-offers, .footer-online .visit-our-networks, .footer-online .burda-community {
 	line-height: 70px;
 	vertical-align: middle;
 }
-.online-angebote {
+.online-offers {
 	width: 281px;
 	border-right: solid 1px #696969; 
 }
-.footer .online-angebote a {
+.footer-general .online-offers a {
 	font-size: 12px;
 }
-.besuchen {
+.visit-our-networks {
 	width: 370px;
 	border-right: solid 1px #696969;
 	padding-left: 35px;
@@ -1109,8 +1093,9 @@ p .main-slogan {
 .burda-community {
 	width: 242px;
 	padding-left: 20px;
+	line-height: normal;
 }
-.footer p {
+.last-slogan p {
 	font-family: GothamBold;
 	font-size: 17px;
 	line-height: 22px;
